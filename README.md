@@ -9,6 +9,7 @@
 * Deployment instructions 
     - rails db:migrate
     - rails s
+Start angular with ng serve
 
 for calculating price of room:
     - Room rates are already defined in the Database for different dates of a month and room type
