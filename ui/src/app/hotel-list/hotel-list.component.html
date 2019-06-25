@@ -1,7 +1,10 @@
-<p>
-  hotel-list works!
-</p>
+<body *ngFor="let hotel of hotels"
+      class='clickable-row'>
+    <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        <h2>{{hotel.name}}</h2>
+        <p>is this hotel available? {{hotel.availability}}</p>
+      </div>
+    </div>
+</body>
 
-<div *ngFor="let hotel of hotels">
-  <h2>{{hotel.name}}</h2>
-</div>

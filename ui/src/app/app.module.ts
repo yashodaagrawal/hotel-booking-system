@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { GridModule } from '@syncfusion/ej2-angular-grids';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ export const API_URL: string = "http://localhost:3000/";
   ],
   imports: [
     BrowserModule,
+    GridModule,
     AppRoutingModule,
     HttpClientModule
   ],
