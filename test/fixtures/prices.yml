@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-06-25
+  deluxe_type: 1
+  luxury_type: 1
+  luxury_suite: 1
+  precidential_suite: 1
+
+two:
+  date: 2019-06-25
+  deluxe_type: 1
+  luxury_type: 1
+  luxury_suite: 1
+  precidential_suite: 1

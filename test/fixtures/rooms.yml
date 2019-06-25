@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  name: MyString
+  occupancy_limit: 1
+  price: 1
+
+two:
+  id: MyString
+  name: MyString
+  occupancy_limit: 1
+  price: 1
