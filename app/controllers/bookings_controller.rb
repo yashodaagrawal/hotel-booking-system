@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
 
   #POST /books
   def create
-    @booking = Booking.new(room_id: params[:room_id], start_date: params[:start_date], last_date: params[:last_date])
+    @booking = Booking.new(room_id: params[:room_id], start_date: params[:move_in_date], last_date: params[:move_out_date])
     respond_to do |format|
       if @booking.save
         format.html { redirect_to @booking, notice: 'Booking was successfully created.' }
@@ -49,7 +49,7 @@ class BookingsController < ApplicationController
 
   def booking_params
     #params["booking"]["room_type"] = params["booking"]["room_type"].to_i if params["booking"]["room_type"].present?
-    params.permit(:room_id, :start_date, :last_date)
+    params.permit(:room_type, :start_date, :last_date)
   end
 
   def booking_params_with_date
