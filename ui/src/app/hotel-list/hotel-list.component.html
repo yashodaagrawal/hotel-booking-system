@@ -1,5 +1,6 @@
 <body *ngFor="let hotel of hotels"
-      class='clickable-row'>
+      [class.selected]="hotel === selectedHotel"
+      (click)="onSelect(hotel) || showDialog = !showDialog">
     <div class="row">
       <div class="column" style="background-color:#aaa;">
         <h2>{{hotel.name}}</h2>
@@ -8,3 +9,16 @@
     </div>
 </body>
 
+<div *ngIf="selectedHotel">
+  <app-dialog [(visible)]="showDialog">
+    <h2>{{selectedHotel.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedHotel.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedHotel.name" placeholder="name"/>
+      </label>
+    </div>
+    <button (click)="showDialog = !showDialog" class="btn">Back</button>
+  </app-dialog>
+
+</div>

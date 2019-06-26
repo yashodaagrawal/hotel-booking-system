@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
+import {Hotel} from "../Hotel";
 
 @Component({
   selector: 'app-hotel-list',
@@ -17,6 +18,11 @@ export class HotelListComponent implements OnInit {
       console.log(data);
       this.hotels = data;
     });
+  }
+
+  selectedHotel: Hotel;
+  onSelect(hotel: Hotel): void {
+    this.selectedHotel = hotel;
   }
 
 }
